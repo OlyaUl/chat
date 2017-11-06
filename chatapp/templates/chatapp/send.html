@@ -1,0 +1,11 @@
+{% extends 'chatapp/index.html' %}
+
+{% block send %}
+        {% csrf_token %}
+        <!--<input type="text" name="title">title<br>-->
+        <!--<input type="text" name="description">description<br>-->
+<div id="field_chat" style="border: 4px double black; height:250px; width:250px; overflow-y:scroll">This is chat<br></div>
+<p><input id="message" type="text"></p>
+<p><input id="send_message" type="submit">OK</p>
+
+{% endblock %}
