@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from channels import Group
-
+from django.views.generic import View, ListView, TemplateView
 
 # Create your views here.
 def index(request):
     return render(request, 'chatapp/index.html', {})
+
+
+class ChatView(TemplateView):
+    template_name = 'chatapp/send.html'
 
 
 '''def ws_connect(message):
